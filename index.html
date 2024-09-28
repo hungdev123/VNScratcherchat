@@ -1,46 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VNScratcherchat</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        #name-container {
-            margin-bottom: 20px;
-        }
-        #chat-container {
-            display: none;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin: 5px 0;
-            padding: 10px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="name-container">
-        <input type="text" id="username" placeholder="Nhập tên của bạn..." autocomplete="off">
-        <button id="nameButton">Xác nhận</button>
-    </div>
     <div id="chat-container">
-        <ul id="messages"></ul>
-        <input type="text" id="chatInput" placeholder="Nhập tin nhắn của bạn..." autocomplete="off">
+        <div id="messages"></div>
+        <input type="text" id="messageInput" placeholder="Nhập tin nhắn của bạn...">
         <button id="sendButton">Gửi</button>
     </div>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="app.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
