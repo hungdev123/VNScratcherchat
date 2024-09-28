@@ -11,13 +11,15 @@ startChatButton.addEventListener('click', () => {
     const username = usernameInput.value.trim();
 
     if (username) {
-        nameContainer.style.display = 'none';
-        chatContainer.style.display = 'block';
+        nameContainer.style.display = 'none'; // Ẩn phần nhập tên
+        chatContainer.style.display = 'block'; // Hiện phần chat
 
         const welcomeMessage = document.createElement('div');
         welcomeMessage.className = 'message';
         welcomeMessage.textContent = `Chào mừng ${username} đến với chat!`;
         messagesDiv.appendChild(welcomeMessage);
+    } else {
+        alert('Vui lòng nhập tên của bạn!'); // Thông báo nếu không nhập tên
     }
 });
 
@@ -32,5 +34,7 @@ sendButton.addEventListener('click', () => {
         messagesDiv.appendChild(messageElement);
         messageInput.value = ''; // Xóa trường nhập sau khi gửi
         messagesDiv.scrollTop = messagesDiv.scrollHeight; // Cuộn xuống tin nhắn mới
+    } else {
+        alert('Vui lòng nhập tin nhắn!'); // Thông báo nếu không nhập tin nhắn
     }
 });
